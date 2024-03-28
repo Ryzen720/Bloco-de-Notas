@@ -2,13 +2,11 @@
     margin:0;
     padding:0;
   }
-  
   header{
     border-bottom: 1px solid #1b85dc;
     height: 10vh;
     display:flex;
   }
-  
   #logo{
     width: 30vw;
     height: 10vh;
