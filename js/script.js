@@ -76,8 +76,8 @@ const loadNotes = ( ) =>{
     return notes;
 }
 const listNotes = () => {
-    let listNotes = localStorage.getItem('notes');
-    listNotes = JSON.parse('listNotes');
+    let listNotes = loadNotes();
+   
     notes.innerHTML = "";
     console.log(listNotes)
     listNotes.forEach((item) => {
@@ -134,3 +134,11 @@ const listNotes = () => {
     
   }
   listNotes();
+
+
+
+
+
+
+
+
