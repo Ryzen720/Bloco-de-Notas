@@ -131,8 +131,19 @@ const listNotes = () => {
           document.querySelector('#input-title').value = note.title;
           document.querySelector('#input-content').value = note.content;
       })
+    btnExcluir.addEventListener("click", () => deleteNote(note.id));
+
+}
+const deleteNote = (noteId) => {
+    let notesList = loadNotes();
     
-  }
+    notesList = notesList.filter(note => note.id !== noteId);
+    localStorage.setItem('notes', JSON.stringify(notesList));
+    listNotes();
+}
+      
+  /*CONSEGUI!*/
+
   listNotes();
 
 
