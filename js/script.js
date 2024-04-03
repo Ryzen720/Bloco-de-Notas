@@ -13,18 +13,40 @@ let btnExcluir = document.querySelector("#btnExcluir");
 
 addNote.addEventListener("click", (evt) => {
     evt.preventDefault();
-    notes.style.display = "none";
-    modal.style.display = "block";
-    addNote.style.display = "none";
+    animateModalSlideIn();
 });
 
-btnCloseNote.addEventListener("click", () =>{
-    evt.preventDefault();
-    notes.style.display = "flex";
-    modal.style.display = "none";
-    addNote.style.display = "block";
+function animateModalSlideIn() {
+    let distance = -100;
+    const slideInterval = setInterval(() => {
+        distance += 10;
+        modal.style.top = distance + "%";
+        if (distance >= 0) {
+            clearInterval(slideInterval);
+            modal.classList.remove("hidden");
+        }
+    }, 20);
+}
+btnCloseNote.addEventListener("click", (evt) =>{
+    evt.preventDefault(); 
+    animateModalSlideOut();
     document.querySelector('#input-id').value="";
-})
+});
+
+
+function animateModalSlideOut() {
+    let distance = 0;
+    const slideInterval = setInterval(() => {
+        distance -= 10;
+        modal.style.top = distance + "%";
+        if (distance <= -100) {
+            clearInterval(slideInterval);
+            modal.classList.add("hidden");
+        }
+    }, 20);
+}
+
+
 
 btnSaveNote.addEventListener("click", (evt) =>{
     evt.preventDefault();
