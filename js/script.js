@@ -11,13 +11,13 @@ let btnCloseNote = document.querySelector("#btn-close-note");//icone para fechar
 let btnEdit = document.querySelector("#btnEdit");
 let btnExcluir = document.querySelector("#btnExcluir");
 
-addNote.addEventListener("click", (evt)=>{
+addNote.addEventListener("click", (evt) => {
     evt.preventDefault();
     notes.style.display = "none";
     modal.style.display = "block";
     addNote.style.display = "none";
-
 });
+
 btnCloseNote.addEventListener("click", () =>{
     evt.preventDefault();
     notes.style.display = "flex";
@@ -33,7 +33,11 @@ btnSaveNote.addEventListener("click", (evt) =>{
         title:document.querySelector("#input-title"). value,
         content:document.querySelector("#input-content").value
     }
+    notes.style.display = "flex";
+    modal.style.display = "none";
+    addNote.style.display = "block";
     saveNote (data);
+    location.reload();
 })
 
 

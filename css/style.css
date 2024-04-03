@@ -1,32 +1,54 @@
 *{
     margin:0;
     padding:0;
+  
+
   }
   header{
     border-bottom: 1px solid #1b85dc;
     height: 10vh;
     display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(86, 121, 216);
+    
+  
   }
-  #logo{
-    width: 30vw;
-    height: 10vh;
+  .back{
+    background-image: url('/assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    min-height: 100vh;
+    width: 100%;
+    
   }
   
-  #logo img{
+  #logo1 img{
+    height: 8vh;
+  }
+  #logo2 img{
     height: 8vh;
   }
   #display{
-    width: 50vw;
+    align-items: center;
+    justify-content: center;
   }
-  
-  #user{
-    width: 20vw;
+  h5{
+    font-size: x-large;
+    color: white;
   }
-  
   main{
     margin: 2vh 2vw;
     min-height: 80vh;
+  
+    
   }
+ #add-notes{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    }
   
   #notes{
     display: flex;
@@ -37,16 +59,31 @@
   .card a{
     text-decoration: none;
   }
+  .card{
+    border-color: black;
+    border-style: double;
+    border-radius: 25px;
+    
+  }
   
   #modal-view{
     border:1px solid #1b85dc;
     position: absolute;
     display:none;
-    width: 90vw;
+    min-width: 50%;
     padding:10px;
-   
+    color: black;
+    background-color: white;
+    width: 90vw;
+    margin-left: 5%;
+    margin-right: 5%; 
+
+    
   }
-  
+  #controls{
+    display: flex;
+    justify-content: center;
+  }
   #close-modal{
     float:right;
   }
@@ -57,6 +94,11 @@
     padding:2vh 2vw;
     display:none;
     width: 90vw;
+    background-color:white;
+    margin-left: 5%;
+    margin-right: 5%;
+   
+    
   }
   
   #controls-note{
